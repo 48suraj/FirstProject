@@ -24,3 +24,10 @@ for(var i=0;i<items.length;i++){
     items[i].style.fontWeight="bold";
 
 }
+// var items=document.getElementsByClassName('suraj-group-item');
+// console.log(items);
+// items[0].style.fontWeight='bold';
+// items[0].style.backgroundColor='yellow';
+
+var li=document.getElementsByTagName('li');
+li[5].style.backgroundColor='green';
