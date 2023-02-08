@@ -29,12 +29,17 @@
 // // items[0].style.fontWeight='bold';
 // // items[0].style.backgroundColor='yellow';
 
-// var li=document.getElementsByTagName('li');
-// li[5].style.backgroundColor='green';
+ var li=document.getElementsByTagName('li');
+ li[3].style.backgroundColor='green';
+//items[3].style.backgroundColor='green';
+ for(var i=0;i<li.length;i++){
+     li[i].style.fontWeight="bold";
+ }
 
-var secondItem=document.querySelector('.list-group-item:nth-child(2)');
- secondItem.style.backgroundColor='green';
 
-var thirdItem=document.querySelector('.list-group-item:nth-child(3)');
-thirdItem.style.visibility='hidden';
+// var secondItem=document.querySelector('.list-group-item:nth-child(2)');
+//  secondItem.style.backgroundColor='green';
+
+// var thirdItem=document.querySelector('.list-group-item:nth-child(3)');
+// thirdItem.style.visibility='hidden';
 
