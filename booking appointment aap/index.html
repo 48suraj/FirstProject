@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
-<head>
+<!-- <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=,, initial-scale=1.0">
   <title>Document</title>
-</head>
+</head> -->
 <body>
   <form onsubmit="saveToLocalStorage(event)">
     <label> Name</label>
@@ -13,7 +13,7 @@
     <label> EmailId</label>
     <input type="email" name="emailId" required/>
     <label>phone</label>
-    <input type="number" name="phonenumber"/>
+    <input type="tel" name="phonenumber"  required/>
     <button> submit </button>
 
   
@@ -28,6 +28,18 @@
     localStorage.setItem('name', name)
     localStorage.setItem('email', email)
     localStorage.setItem('phonenumber', phonenumber)
+    const obj={
+                name,
+                email,
+                phone
+            }
+            localStorage.setItem(JSON.stringify(obj));
+            showUserOnScreen(obj);
+        }
+        function showUserOnScreen(obj){
+            const parenElem = document.getElementById('listofitems');
+            childElem.textContent=obj.name+'_'+obj.email+'_'+obj.phone;
+            parentElem.appendChild(childElem);
     }
   </script>
 </body>
